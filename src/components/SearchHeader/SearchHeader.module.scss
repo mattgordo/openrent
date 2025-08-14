@@ -1,0 +1,73 @@
+@use '../../styles/_breakpoints' as breakpoints;
+
+.searchHeader {
+  box-shadow: 1px 0px 6px 2px var(--color-light-grey);
+  position: sticky;
+  top: 0;
+
+  .searchHeaderContent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px;
+    width: 100%;
+  }
+
+  .searchInput {
+    border: 1px solid var(--color-mid-grey);
+    border-radius: 8px;
+    height: 48px;
+    font-size: 16px;
+    padding: 8px;
+    width: 100%;
+  }
+
+  .controls {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+
+    .sort {
+      align-items: center;
+      display: flex;
+      flex: 1;
+
+      .sortLabel {
+        width: 40px;
+      }
+
+      .sortSelect {
+        border-color: var(--color-light-grey);
+        border-radius: 8px;
+        color: var(--color-dark-grey);
+        flex: 1;
+        font-size: 16px;
+        height: 40px;
+        padding: 8px;
+      }
+    }
+  }
+
+  @include breakpoints.breakpoint-mob-tab() {
+
+    .searchHeaderContent {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .controls {
+      max-width: 400px;
+      width: 100%;
+
+      .sort .sortSelect {
+        height: 48px;
+      }
+    }
+
+    .searchInput {
+      max-width: 50%;
+    }
+  }
+}

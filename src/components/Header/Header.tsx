@@ -1,9 +1,8 @@
-// import OpenRentLogo from '../../assets/openrent-logo.svg';
-
-import { UserIcon } from '../../icons/UserIcon.tsx/UserIcon';
+import { OpenRentIcon } from '../../icons/OpenRent/OpenRentIcon';
+import { UserIcon } from '../../icons/User/UserIcon';
 import { MenuIcon } from '../../icons/Menu/MenuIcon';
 
-import { OpenRentIcon } from '../../icons/OpenRent/OpenRentIcon';
+import { Button } from '../Button/Button';
 
 import styles from "./Header.module.scss";
 
@@ -16,7 +15,9 @@ export const Header = () => {
         </a>
         <nav className={styles.headerNav}>
           <ul>
-            <li className={styles.desktopLink}><button role="button">Add Listing</button></li>
+            <li className={styles.desktopLink}><a href="#about">About</a></li>
+            <li className={styles.desktopLink}><a href="#pricing">Landlord Pricing & Services</a></li>
+            <li className={styles.desktopLink}><Button label="Add Listing" /></li>
             <li><a className={styles.login} href="#login"><UserIcon /></a></li>
             <li className={styles.mobileLink}><a className={styles.menu} href="#menu"><MenuIcon /></a></li>
           </ul>

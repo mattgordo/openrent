@@ -10,9 +10,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --color-lighter-grey: #{colours.$lighter-grey};
   --color-primary-blue: #{colours.$primary-blue};
   --color-light-grey: #{colours.$light-grey};
   --color-mid-grey: #{colours.$mid-grey};
+  --color-dark-grey: #{colours.$dark-grey};
+  --color-darker-grey: #{colours.$darker-grey};
+  --color-primary-green: #{colours.$primary-green};
 }
 
 *,
@@ -92,6 +96,8 @@ main {
 }
 
 body {
+  background-color: var(--color-lighter-grey);
+  color: var(--color-darker-grey);
   line-height: 1;
   overscroll-behavior: none;
 }
