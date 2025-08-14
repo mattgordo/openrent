@@ -1,0 +1,77 @@
+@use '../../styles/_breakpoints' as breakpoints;
+
+.searchResults {
+
+  .resultsCount {
+    line-height: 20px;
+
+    .count {
+      color: var(--color-darker-grey);
+      font-size: 20px;
+    }
+
+    .searchLocation {
+      font-style: italic;
+      font-weight: 600;
+    }
+  }
+
+  .resultsMap {
+    display: none;
+  }
+
+  .resultsMapMobile {
+    position: absolute;
+    inset: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .resultsList {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+  }
+
+  .toggleMapButton {
+    background-color: var(--color-darker-grey);
+    border-radius: 16px;
+    bottom: 20px;
+    color: #fff;
+    left: 50%;
+    padding: 8px 16px;
+    position: fixed;
+    transform: translateX(-50%);
+  }
+
+  @include breakpoints.breakpoint-tab-desktop() {
+    .resultsMap {
+      display: block;
+      box-shadow: 0 0 12px 2px var(--color-light-grey);
+      border-radius: 8px;
+      margin: 16px 0 32px;
+      overflow: hidden;
+      width: 100%;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  @include breakpoints.breakpoint-mob-tab() {
+    .count {
+      font-size: 24px;
+    }
+
+    .toggleMapButton {
+      display: none;
+    }
+  }
+}

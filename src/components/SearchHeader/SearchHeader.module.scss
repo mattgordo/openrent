@@ -1,9 +1,12 @@
 @use '../../styles/_breakpoints' as breakpoints;
+@use '../../styles/mixins' as mixins;
 
 .searchHeader {
+  background-color: var(--color-lighter-grey);
   box-shadow: 1px 0px 6px 2px var(--color-light-grey);
   position: sticky;
   top: 0;
+  z-index: 1;
 
   .searchHeaderContent {
     display: flex;
@@ -22,6 +25,11 @@
     font-size: 16px;
     padding: 8px;
     width: 100%;
+
+    &:focus-visible {
+
+      @include mixins.focusRing();
+    }
   }
 
   .controls {
@@ -46,6 +54,11 @@
         font-size: 16px;
         height: 40px;
         padding: 8px;
+
+        &:focus-visible {
+
+          @include mixins.focusRing();
+        }
       }
     }
   }

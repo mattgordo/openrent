@@ -1,0 +1,5 @@
+@mixin focusRing {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 4px 4px var(--color-primary-blue);
+}

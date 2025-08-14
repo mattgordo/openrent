@@ -1,0 +1,144 @@
+@use '../../styles/mixins' as mixins;
+
+.resultItem {
+  background-color: #fff;
+  border-radius: 8px;
+
+  a {
+    color: var(--color-dark-grey);
+    border-radius: 8px;
+    display: block;
+    height: 100%;
+    padding: 16px;
+    position: relative;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus-visible {
+
+      @include mixins.focusRing();
+    }
+  }
+
+  &.new {
+    box-shadow: 0px 0px 0px 2px var(--color-primary-green);
+    border-radius: 8px;
+  }
+
+  .newBadge {
+    background-color: var(--color-primary-green);
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    padding: 4px 24px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  .resultItemContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .resultItemImage {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      display: block;
+      margin: -16px -16px 0;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .resultItemDetails {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding-top: 16px;
+    }
+
+    .pricing {
+      align-items: baseline;
+      display: flex;
+      gap: 8px;
+
+      .pricePM {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--color-primary-blue);
+      }
+
+      .pricePW {
+        color: var(--color-primary-blue);
+      }
+    }
+
+    .resultItemTitle {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .summaryItems {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      svg {
+        width: 18px;
+      }
+    }
+
+    .transportLinks {
+      align-items: end;
+      display: flex;
+      flex: 1;
+      margin-top: 8px;
+      justify-content: end;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      img {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+
+  .heartButton {
+    background: none;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    height: 24px;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+
+    &:focus-visible {
+
+      @include mixins.focusRing();
+    }
+  }
+
+  .heartIcon {
+    width: 24px;
+    height: 24px;
+    transition: fill 0.2s ease;
+  }
+}
