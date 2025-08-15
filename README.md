@@ -54,6 +54,8 @@ Here I changed a few bits of the UI, hopefully to the benefit of the user.
 
 - I also felt using icons for bed and bath information was a more modern look and easier to digest quickly compared to reading the information.
 
+- I adopted pagination for navigation for other listings rather than the infinite scroll. Pagination is much better for SEO and general navigation (UX, sharing links). Depending on how important the footer is as well, with infinite scroll users would never reach it
+
 Before:
 ![Listings Mobile (old)](public/listings-old-desktop.png)
 
