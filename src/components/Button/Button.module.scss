@@ -19,12 +19,20 @@
     background-color: var(--color-primary-green);
     color: #fff;
     font-weight: 500;
+
+    &:hover {
+      background-color: var(--color-primary-green-hover);
+    }
   }
 
   &.secondary {
     background-color: #fff;
     border: 1px solid var(--color-light-grey);
     color: var(--color-dark-grey);
+
+    &:hover {
+      background-color: var(--color-lighter-grey);
+    }
   }
 
   &.small {

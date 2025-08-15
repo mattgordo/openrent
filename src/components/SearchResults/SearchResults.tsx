@@ -3,7 +3,9 @@ import { useState } from 'react';
 import data from '../../data.json';
 import map from '../../assets/map-results.png';
 import mapMob from '../../assets/map-results-mob.png';
+
 import { SearchResultsItem } from '../SearchResultsItem/SearchResultsItem';
+import { Pagination } from '../Pagination/Pagination';
 
 import styles from "./SearchResults.module.scss";
 
@@ -24,6 +26,7 @@ export const SearchResults = () => {
         : <ul className={styles.resultsList}>
           {results.map((result) => <SearchResultsItem key={result.id} result={result} />)}
         </ul>}
+      <Pagination currentPage={1} totalPages={5} onPageChange={(page) => console.log(`Page changed to: ${page}`)} />
       {/* As this is a demo, this doesn't cover the edge case of turning map view on and changing viewport to desktop */}
       <button className={styles.toggleMapButton} onClick={() => setShowMap(!showMap)}>{showMap ? 'Show list' : 'Show map'}</button>
     </div>
